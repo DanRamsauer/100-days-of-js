@@ -23,12 +23,16 @@ add.addEventListener("click", ()=>{
     setColor();
 });
 
-function setColor() {
-    if(counter.innerHtml > 0){
-        counter.getElementsByClassName.color = '#98CE00';
-    } else if(counter.innerHtml < 0){
-        counter.getElementsByClassName.color = 'red';
+const setColor = () => {
+    if(counter.innerText > 0){
+        counter.style.color = 'yellow';
+    } else if(counter.innerText < 0){
+        counter.style.color = 'red';
     }else {
-        counter.getElementsByClassName.color = 'white';
+        counter.style.color = 'white';
     }
 }
+
+setColor();
+
+console.log(counter.innerText);

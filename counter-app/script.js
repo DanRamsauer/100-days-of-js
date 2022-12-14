@@ -9,16 +9,19 @@ const add = document.querySelector('#add');
 // when clicked on reset want to have counter go to 0
 
 subtract.addEventListener("click", ()=>{
+    // subtracting from the counter default (0) in the innerText
     counter.innerText--;
     setColor();
 });
 
 reset.addEventListener("click", ()=>{
+    // reseting the counter default (0) in the innerText
     counter.innerText = 0;
     setColor();
 });
 
 add.addEventListener("click", ()=>{
+    // adding from the counter default (0) in the innerText
     counter.innerText++;
     setColor();
 });

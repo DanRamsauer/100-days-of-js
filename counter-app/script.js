@@ -27,6 +27,7 @@ add.addEventListener("click", ()=>{
 });
 
 const setColor = () => {
+    // changing the color based on the number of the counter to be yellow if greater than one and red if less than
     if(counter.innerText > 0){
         counter.style.color = 'yellow';
     } else if(counter.innerText < 0){

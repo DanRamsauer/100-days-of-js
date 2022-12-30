@@ -16,3 +16,5 @@ const generateColor = () => {
 }
 
 button.addEventListener('click', generateColor);
+
+generateColor();

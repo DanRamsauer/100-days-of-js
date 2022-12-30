@@ -1,7 +1,6 @@
 main{
-  position: absolute;
-  left: 25%;
-  top: 25%;
+  display: flex;
+  margin: 25vh auto;
 }
 .wrapper{
   width: 500px;
@@ -10,9 +9,9 @@ main{
   align-items: center;
   background-color: #89A6FB;
   padding: 25px;
-  justify-content: space-between;
   border-radius: 3%;
   height: 200px;
+  margin: 0 auto;
 }
 
 h1{

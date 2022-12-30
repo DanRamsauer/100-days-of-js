@@ -1,6 +1,6 @@
 // grab generate button and add event listener to it
-// when clicked use math.random to generate a random number
-// use math.floor or ceiling to round
+// when clicked generate a random hex color
+// have that color become our new background
 
 const number = document.getElementById('number');
 const generate = document.querySelector('button');

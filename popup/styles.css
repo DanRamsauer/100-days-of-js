@@ -44,7 +44,7 @@ section .container{
     flex-direction: column;
 }
 
-form button{
+button{
     outline: none;
     border: 1px solid white;
     padding: 8px;
@@ -57,7 +57,7 @@ form button{
     cursor: pointer;
 }
 
-form button:hover{
+button:hover{
     background-color: blue;
 }
 
@@ -81,14 +81,23 @@ form button:hover{
     padding: 2rem;
     border: 1px solid #777;
     text-align: center;
-    animation: slide ease .8;
+    animation: slide ease .8s;
 }
 
 @keyframes slide {
-    from {
+    0% {
         transform: translateY(-30);
     }
-    to {
+    100% {
         transform: translateY(0);
     }
+}
+
+.close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
 }

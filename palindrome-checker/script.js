@@ -13,7 +13,7 @@ enter.addEventListener('click', palindromeChecker);
 function palindromeChecker (e) {
     // error handling for if the user doesnt input anything
     if (message.value === '') {
-
+        // It can be empty becauseI have made the input required so this just stops it from running no matter what
     }
     else {
         // prevent refresh of page

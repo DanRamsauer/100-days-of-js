@@ -1,41 +1,43 @@
-// Check if the word is a plaindrome (same word in reverse ex: racecar)
-// break up word using [...] or .split()
-// reverse the word using .reverse()
-// join the word back together using .join('')
-// check if new word is === to old word
+// grab message and message.value
+// count vowels in message. value
+// display how many vowels there are on submit 
+    // on submit preventDefault()
 
-const message = document.querySelector("#message");
-const enter = document.querySelector("#button");
-const results = document.querySelector("#results");
+const message = document.querySelector('#message');
+const submit = document.querySelector('#button');
+const result = document.querySelector('#results');
+const vowels = ['a', 'e', 'i' , 'o', 'u'];
 
-enter.addEventListener('click', palindromeChecker);
-
-function palindromeChecker (e) {
-    // error handling for if the user doesnt input anything
-    if (message.value === '') {
-        // It can be empty becauseI have made the input required so this just stops it from running no matter what
+// add event listener on submit take message and call vowel counter function while passing the message value as a parameter
+submit.addEventListener('click', (e) => {
+    // preventing refresh on submit
+    e.preventDefault();
+    // creating a new variable / calling the function with the user message passed into the function as a parameter
+    const vowelCount = vowelCounter(message.value);
+    // if there are more than one vowels give the user this message
+    if (vowelCount > 1) {
+        // setting the innerHtml for feedback to the user
+        result.innerText = `There are ${vowelCount} vowels`;
+    // other wise if there are no vowels give the user this message
+    } else {
+        result.innerText = `There is ${vowelCount} vowel`;
     }
-    else {
-        // prevent refresh of page
-        e.preventDefault();
-        // error handling not allowing the user to keep appending the same message over and over we are clearing the innerText before it appends again
-        results.innerText = '';
-        
-        // creating a variable for the users word
-        const userWord = message.value;
-        // [...userword] breaks down the word into an array
-        // .reverse() reverses the arrays order
-            // .join('') joins the array into a new string with out the '' it would not be a string and wouldnt work
-            const newWord = [...userWord].reverse().join('');
-            
-            // if the word in reverse is the same as the word normally it is a palindrome
-            if (newWord === userWord) {
-                results.append(`${userWord} is ${newWord} backwards hence ${userWord} IS a palindrome`);
-            }
-            else {
-                results.append(`${userWord} is ${newWord} backwards hence ${userWord} is NOT a palindrome`);
-            }
-            // clearning the value after the function runs to allow the input to be empty for easier typing for a new word
-            message.value = '';
+    // clearing input for user to input another message easier
+    message.value = '';
+});
+
+// function for vowel counter
+function vowelCounter (str) {
+    // defining counter valiable
+    let counter = 0;
+    // looping through the string
+    for (let char of str) {
+        // if there are vowels in the string
+        if (vowels.includes(char)) {
+            // add one to the counter
+            counter++;
+        }
     }
+    // returning the counter from the function
+    return counter;
 };

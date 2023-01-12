@@ -25,29 +25,31 @@ h1{
     text-align: center;
 }
 
-.copy {
-    display: flex;
-    justify-content: center;
-}
-
-.copy h2 { 
+form input { 
     background-color: white;
     width: 50%;
     text-align: center;
     padding: 10px;
     border-radius: 5px;
     margin: 0 5px 0 0;
+    color: black;
 }
 
-.copy button { 
+form button { 
     background-color: blueviolet;
     color: white;
     border: white solid 2px;
     border-radius: 5px;
+    height: 40px;
 }
 
-.copy button:hover {
+form button:hover {
     background-color: white;
     color: black;
     border: solid black 2px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
 }
